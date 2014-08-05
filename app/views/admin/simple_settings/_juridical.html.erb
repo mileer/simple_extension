@@ -1,0 +1,50 @@
+<table>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_juridical_enabled) %>:</td>
+    <td><%= @simple_configuration['juridical_enabled'] ? t("yes") : t("no") %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_recipient) %>:</td>
+    <td><%= @simple_configuration['recipient'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_address) %>:</td>
+    <td><%= @simple_configuration['address'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_inn) %>:</td>
+    <td><%= @simple_configuration['inn'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_kpp) %>:</td>
+    <td><%= @simple_configuration['kpp'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_bank) %>:</td>
+    <td><%= @simple_configuration['bank'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_settlement_acc) %>:</td>
+    <td><%= @simple_configuration['settlement_acc'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_corr) %>:</td>
+    <td><%= @simple_configuration['corr'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_bik) %>:</td>
+    <td><%= @simple_configuration['bik'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_nds) %>:</td>
+    <td><%= @simple_configuration['nds'] ? t(:w_nds) : t(:wo_nds) %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_director) %>:</td>
+    <td><%= @simple_configuration['director'] %></td>
+  </tr>
+  <tr>
+    <td><%= SimpleConfiguration.human_attribute_name(:preferred_accountant) %>:</td>
+    <td><%= @simple_configuration['accountant'] %></td>
+  </tr>
+</table>
