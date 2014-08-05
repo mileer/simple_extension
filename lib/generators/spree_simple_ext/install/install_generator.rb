@@ -12,8 +12,12 @@ module SpreeSimpleExt
         inject_into_file 'vendor/assets/stylesheets/spree/backend/all.css', " *= require admin/simple\n", :before => /\*\//, :verbose => true
       end
 
-      def add_migrations
+      def run_address_book
         run 'bundle exec rake railties:install:migrations FROM=spree_simple_ext'
+      end
+
+      def add_migrations
+        run 'bundle exec rails generate spree_address_book:install'
       end
 
       def run_migrations
