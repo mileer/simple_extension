@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.author    = 'Mine'
   s.email     = 'meavtor@gmail.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.homepage  = 'https://github.com/mileer/simple_extension'
 
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 2.3.1'
-  s.add_dependency('json', '>= 1.5')
-  s.add_dependency('nokogiri', '~> 1.5')
+  s.add_dependency 'json', '>= 1.5'
+  s.add_dependency 'nokogiri', '~> 1.5'
   s.add_dependency 'ru_propisju', '~> 1.1.0'
 
   s.add_development_dependency 'capybara', '~> 2.1'

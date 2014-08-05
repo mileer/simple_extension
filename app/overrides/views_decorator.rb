@@ -1,12 +1,4 @@
 Deface::Override.new(
-  :virtual_path => "spree/users/show",
-  :name => "address_book_account_my_orders",
-  :insert_after => "[data-hook='account_my_orders'], #account_my_orders[data-hook]",
-  :partial => "spree/users/addresses",
-  :disabled => false
-)
-
-Deface::Override.new(
   :virtual_path => "admin/orders/show",
   :name => "simple_admin_order_show_buttons",
   :insert_before => "[data-hook='admin_order_show_buttons'], #admin_order_show_buttons[data-hook]",

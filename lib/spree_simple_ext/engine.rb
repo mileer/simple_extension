@@ -4,9 +4,9 @@ module SpreeSimpleExt
     isolate_namespace Spree
     engine_name 'spree_simple_ext'
 
-    # initializer "spree.advanced_cart.environment", :before => :load_config_initializers do |app|
-    #   Spree::AddressBook::Config = Spree::AddressBookConfiguration.new
-    # end
+    initializer "spree.advanced_cart.environment", :before => :load_config_initializers do |app|
+      Spree::AddressBook::Config = Spree::AddressBookConfiguration.new
+    end
 
     config.autoload_paths += %W(#{config.root}/lib)
 
@@ -19,8 +19,6 @@ module SpreeSimpleExt
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
-
-      Spree::Ability.register_ability(Spree::AddressAbility)
 
       # Calculator::SelfDelivery.register
       # Calculator::CashOnDelivery.register
