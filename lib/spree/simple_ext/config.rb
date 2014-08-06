@@ -6,7 +6,7 @@ module Spree
       
       class << self
         def instance
-          return nil unless ActiveRecord::Base.connection.tables.include?('configurations')
+          return nil unless ActiveRecord::Base.connection.tables.include?('spree_configurations')
           SimpleConfiguration.find_or_create_by_name("Simple configuration")
         end
       end

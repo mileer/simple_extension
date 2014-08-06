@@ -1,6 +1,5 @@
 /*
- *= require store/spree_address_book
- *= require admin/inline_help
+ *= require_tree .
  *= require_self
 */
 

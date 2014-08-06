@@ -35,11 +35,11 @@ module SpreeSimpleExt
 
       # переопределение события :next для отображения шага подтверждения в любом случае
       next_event = StateMachine::Event.new(Spree::Order.state_machine, :next)
-      next_event.transition :from => 'cart',     :to => 'address'
-      next_event.transition :from => 'address',  :to => 'delivery'
-      next_event.transition :from => 'delivery', :to => 'payment'
-      next_event.transition :from => 'payment',  :to => 'confirm'
-      next_event.transition :from => 'confirm',  :to => 'complete'
+      next_event.transition :from => :cart,     :to => :address
+      next_event.transition :from => :address,  :to => :delivery
+      next_event.transition :from => :delivery, :to => :payment
+      next_event.transition :from => :payment,  :to => :confirm
+      next_event.transition :from => :confirm,  :to => :complete
       Spree::Order.state_machine.events << next_event
     end
 
